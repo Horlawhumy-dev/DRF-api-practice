@@ -1,0 +1,23 @@
+{% extends 'myapp/base.html'%}
+
+{% block title %} INDEX {% endblock title%}
+
+{% block content %}
+ <div class="container">
+        <h1> BASE PAGE LOADS! </h1>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos accusantium facere fugit ex facilis in unde nam libero. 
+            Sed error illo harum? Maiores nulla optio beatae autem non voluptate labore amet excepturi quisquam dolorem ipsam aut, 
+            voluptas, temporibus ea mollitia.</p>
+
+        <div class="link_cont">
+            <a href="{% url 'index' %}">Go To Index Page</a>
+            <a href="{% url 'myapp:about' 'name' %}">Go To About Page</a>
+            <a href="{% url 'myapp:contact' %}">Go To Contact Page</a>
+            <a href="{% url 'account:my-account-view' %}">Go To Register Page</a> 
+            {% comment %} <a href="{% url 'viewsetapi' %}">See List</a>  {% endcomment %}
+        </div>
+        <br><br>
+       
+    </div>
+{% endblock content %}

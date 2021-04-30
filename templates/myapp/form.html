@@ -1,0 +1,19 @@
+
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+    {% if registered %}
+        <h2>"Thanks for the registration"</h2> 
+    {% else %}
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Your username ...">
+            <input type="email" name="email" placeholder="Your email ...">
+            <input type="password" name="password1" placeholder="Your password ...">
+            <input type="password" name="password2" placeholder="Confirm your password ...">
+            {% comment %} {{ form.as_p }} {% endcomment %}
+            <input type="submit" value="Submit">
+            </form>
+    {% endif %}
+
+{% endblock content %}

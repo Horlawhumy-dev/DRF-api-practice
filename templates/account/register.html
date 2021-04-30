@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html'%}
+
+{% block title%} Account Registeration {% endblock%}
+
+{% block content %}
+    <form method="POST" action="{% url 'account:my-account-view' %}">
+        {% csrf_token %}
+        {{ form.name }} <br>
+        {{ form.username }} <br>
+        {{ form.password }} <br>
+        {{ form.password2 }} <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock%}
