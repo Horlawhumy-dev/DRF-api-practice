@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import dj_database_url
-load_dotenv()
+# load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('o_=bxh)itz&gv5_yk+3+$i&l@7k^i+x4=$yaj2k(7z+st$%6*p')
+SECRET_KEY = 'o_=bxh)itz&gv5_yk+3+$i&l@7k^i+x4=$yaj2k(7z+st$%6*p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
