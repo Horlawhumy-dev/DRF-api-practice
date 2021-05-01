@@ -1,6 +1,6 @@
-from rest_framework.routers import DefaultRouter
-from viewsetapi.viewsets import EmployeeViewset
+# from rest_framework.routers import DefaultRouter
+# from viewsetapi.viewsets import EmployeeViewset
 
-router = DefaultRouter()
+# router = DefaultRouter()
 
-router.register('employee', EmployeeViewset)
+# router.register('employee', EmployeeViewset)

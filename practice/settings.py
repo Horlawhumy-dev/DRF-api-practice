@@ -65,7 +65,7 @@ ROOT_URLCONF = 'practice.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'reacttodoapp/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,7 +134,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'reacttodoapp/build/static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')

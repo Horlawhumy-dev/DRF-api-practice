@@ -18,14 +18,12 @@ from django.conf import settings
 from django.urls import path, include
 from myapp import views
 from .router import router
-
+from django.views.generic import TemplateView
 urlpatterns = [
-    path('', views.index_view, name="index"),
-    path('myapp/', include('myapp.urls')),
-    path('account/', include('account.urls')),
     path('api/', include('api.urls')),
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='index.html'))
     
 ]
 
