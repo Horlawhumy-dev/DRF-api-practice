@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from django.http import JsonResponse
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -44,7 +42,7 @@ def taskCreate(request):
 
 
 
-@api_view(['POST'])
+@api_view(['PUT'])
 def taskUpdate(request, pk):
     task = Task.objects.get(id=pk)
     serializer = TaskSerializer(instance=task, data=request.data)
